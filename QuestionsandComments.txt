@@ -1,0 +1,26 @@
+This document is to put some important information, questions, comments or things to do
+
+
+COMMENTS
+
+- Important, and often stated to create own code: we have copied some stuff from his code, like creation of design matrix, is that ok?
+- In his book he says: "You should a critical discussion of why and how you have scaled or not scaled the data
+- In what way does the scaling of the data influence what we have done?
+
+
+
+
+
+
+Extra stuff done by Marvin
+
+- Some of this stuff I am keeping in private files, if you want to I can upload them
+
+
+1. Dependence of the MSE as a function of the increase in noise
+2. Estimated the variance of the betas ( parameters from the OLS ) 
+- Confidence interval not so clear, some of the uncertainties in the parameters are high 
+- Important to check that it is correct, maybe numerically,
+3. Also have done the plot of the MSE as a function of model complexity (up to 12 degrees of freedom)
+- This is quite a bit erratic, definetely check a different way
+
