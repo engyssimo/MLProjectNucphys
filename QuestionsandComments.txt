@@ -11,6 +11,16 @@ IMPORTANT QUESTIONS
 
 - We need to understand the results coming from cross validation, a bit strange 
 
+- What is the effect of the number of points on the optimal complexity (MSE train-Test). If we change from 70 to 100 points a lot changes...
+
+- What is the influence of the number of folds, both on the MSE and on the complexity?
+
+- Again, what is the role of the n of points; and noise, for the Ridge regression, when does the ridge regression give better predictions than the OLS?
+
+- The complexity tradeoff(train-test) of OLS is clear, while for Ridge there doesnt seem to be this tendency, why?
+
+- What is the influence of the scaling on our results? Maybe we should do an experiment of computing everything for the scaled data and without, then compare
+
 NOTES
 
 
@@ -19,3 +29,44 @@ NOTES
 THINGS TO CHANGE ON CODE
 
 - Need to use same set of data for everything, to be able to compare, sometimes we create new data for a section
+
+
+- Also, to calculate the noise, and the z of Franke function; we are using the shape of X, which changes if we change the polynomial, so basically we are using new noise for each problem. It shouldnt affect too much but it is not very correct I think
+
+
+- The error, bias, variance plot, might be more interesting to plot separately, since it is hard to see the difference between them on the same graph
+
+
+- Careful, it we should not have the number of bootstrap resamples higher than the number of points
+
+
+- Careful, for the rescaling of the data, usually we calculate z using the unscaled matrix, and then we rescale the data... i think this is not correct (see Mortens book, section on scaling). If we rescale our design matrix X, then we should calculate z with this new rescaled matrix, and usually what we have done is we create the design matrix, compute z, then rescale the matrix X . Careful!!
+Example shown:
+"""
+#Model training, we compute the mean value of y and X
+y_train_mean = np.mean(y_train)
+X_train_mean = np.mean(X_train,axis=0)
+X_train = X_train - X_train_mean
+y_train = y_train - y_train_mean
+
+# The we fit our model with the training data
+trained_model = some_model.fit(X_train,y_train)
+
+
+#Model prediction, we need also to transform our data set used for the prediction.
+X_test = X_test - X_train_mean #Use mean from training data
+y_pred = trained_model(X_test)
+y_pred = y_pred + y_train_mean
+"""
+
+- Fit intercept should be true or false? For ridge we obtain better MSE if we do not penalize the intercept, so it would make sense to scale. 
+
+- In scaling the data, is it important to normalize by STD, why?
+
+
+
+CONSIDERING THE REAL DATASET
+
+
+
+
