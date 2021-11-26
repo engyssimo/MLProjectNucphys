@@ -9,6 +9,8 @@ IMPORTANT QUESTIONS
 - Discussion of the scaling, importance, effects, etc
 
 
+- Influence of the number of bootstrap points
+
 - We need to understand the results coming from cross validation, a bit strange 
 
 - What is the effect of the number of points on the optimal complexity (MSE train-Test). If we change from 70 to 100 points a lot changes...
@@ -29,9 +31,6 @@ NOTES
 THINGS TO CHANGE ON CODE
 
 - Need to use same set of data for everything, to be able to compare, sometimes we create new data for a section
-
-
-- Also, to calculate the noise, and the z of Franke function; we are using the shape of X, which changes if we change the polynomial, so basically we are using new noise for each problem. It shouldnt affect too much but it is not very correct I think
 
 
 - The error, bias, variance plot, might be more interesting to plot separately, since it is hard to see the difference between them on the same graph
@@ -66,6 +65,26 @@ y_pred = y_pred + y_train_mean
 
 
 CONSIDERING THE REAL DATASET
+
+
+IDEAS
+
+- Vary the number of points of our data ( see how this influences the results, complexity, etc)
+
+- Rescale also the z (calculate then rescale) (separately from the feature) , following the example from his book
+
+
+
+- the MSE for the OLS using the scaled and non scaled data is the same (as should be)
+Now, for the ridge regression, there should be a difference -to check (scaling should give a better result, and also compare with skl function that does everything ) . 
+
+
+Concepts
+
+
+- The noise directly influences the optimal complexity of our system. The bigger the noise, a smaller complexity gives better predictions and viceversa
+
+
 
 
 
