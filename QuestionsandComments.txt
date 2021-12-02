@@ -1,4 +1,50 @@
 This document is to put some important information, questions, comments or things to do
+_______________________________________________________________________________________________
+
+
+TO DO
+
+On Franke Function
+
+- Find the confidence interval for our parameters (Yazeed working on it)
+- Define a scaler function ( that takes our matrix and subtracts the mean; but how does this scaling influence the rest of the functions for OLS and Ridge?, it might not be such a simple problem)
+
+- Study the effect of the noise, we need a systematic study of how the noise affects our system ( for loop through different noise values). We expect a better fit for Ridge than for OLS in the case of noisy systems, we should check this.
+
+- Comment the important aspects of each graph on the cell under (this analysis will go directly in the report, therefore every graph should be very well understood) 
+
+On the REAL DATA
+
+- Bootstrap and Cross validation analysis of real data (for OLS)
+- If they agree, see the influence of the number of parameters (correlation threshold) on this value, how does the optimal complexity change? 
+
+- Bootstrap and Cross validation analysis of real data (for Ridge)
+
+- What are some extra/ interesting things that we can do ?
+
+----------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+
+PRACTICALITIES (comments about organization)
+
+- Marvin: I have created a file name MarvinProject1, where I have cleaned up all the functions and code from the files Project1 and ProjectUniform. I have found some mistakes in different places, small but difficult to see, so I recommend making a copy of this file, and working on it from now on.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------
 
 IMPORTANT QUESTIONS
 
