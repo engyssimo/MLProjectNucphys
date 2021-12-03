@@ -6,17 +6,17 @@ TO DO
 
 On Franke Function
 
-- Find the confidence interval for our parameters (Yazeed working on it)
+
 - Define a scaler function ( that takes our matrix and subtracts the mean; but how does this scaling influence the rest of the functions for OLS and Ridge?, it might not be such a simple problem)
 
 - Study the effect of the noise, we need a systematic study of how the noise affects our system ( for loop through different noise values). We expect a better fit for Ridge than for OLS in the case of noisy systems, we should check this.
 
-- Comment the important aspects of each graph on the cell under (this analysis will go directly in the report, therefore every graph should be very well understood) 
+- Comment the important aspects of each graph on the cell under (this analysis will go directly in the report, therefore every graph should be very well understood)
 
 On the REAL DATA
 
 - Bootstrap and Cross validation analysis of real data (for OLS)
-- If they agree, see the influence of the number of parameters (correlation threshold) on this value, how does the optimal complexity change? 
+- If they agree, see the influence of the number of parameters (correlation threshold) on this value, how does the optimal complexity change?
 
 - Bootstrap and Cross validation analysis of real data (for Ridge)
 
@@ -57,7 +57,7 @@ IMPORTANT QUESTIONS
 
 - Influence of the number of bootstrap points
 
-- We need to understand the results coming from cross validation, a bit strange 
+- We need to understand the results coming from cross validation, a bit strange
 
 - What is the effect of the number of points on the optimal complexity (MSE train-Test). If we change from 70 to 100 points a lot changes...
 
@@ -72,7 +72,7 @@ IMPORTANT QUESTIONS
 NOTES
 
 
-- The bootstrap sampling gives us the same optimal complexity as the MSE (training and test ), and this is good, but the cross validation gives us an optimal complexity of 3, why? 
+- The bootstrap sampling gives us the same optimal complexity as the MSE (training and test ), and this is good, but the cross validation gives us an optimal complexity of 3, why?
 
 THINGS TO CHANGE ON CODE
 
@@ -104,7 +104,7 @@ y_pred = trained_model(X_test)
 y_pred = y_pred + y_train_mean
 """
 
-- Fit intercept should be true or false? For ridge we obtain better MSE if we do not penalize the intercept, so it would make sense to scale. 
+- Fit intercept should be true or false? For ridge we obtain better MSE if we do not penalize the intercept, so it would make sense to scale.
 
 - In scaling the data, is it important to normalize by STD, why?
 
@@ -122,16 +122,10 @@ IDEAS
 
 
 - the MSE for the OLS using the scaled and non scaled data is the same (as should be)
-Now, for the ridge regression, there should be a difference -to check (scaling should give a better result, and also compare with skl function that does everything ) . 
+Now, for the ridge regression, there should be a difference -to check (scaling should give a better result, and also compare with skl function that does everything ) .
 
 
 Concepts
 
 
 - The noise directly influences the optimal complexity of our system. The bigger the noise, a smaller complexity gives better predictions and viceversa
-
-
-
-
-
-
