@@ -29,6 +29,12 @@ PRACTICALITIES (comments about organization)
 
 - Marvin: I have created a file name MarvinProject1, where I have cleaned up all the functions and code from the files Project1 and ProjectUniform. I have found some mistakes in different places, small but difficult to see, so I recommend making a copy of this file, and working on it from now on.
 
+- Filippo's update : I have created the file FilippoProject1 updating Marvin's with a
+                      lot of comparisons among different numbers of data points, noise
+                      coefficients and also comparison with or without scaling
+
+
+
 
 
 
