@@ -1,0 +1,12 @@
+ unit, activation function, features , train accuracy, test accuracy 
+64 relu 118 0.8778873682022095 0.860786497592926
+ unit, activation function, features , train accuracy, test accuracy 
+64 tanh 118 0.8999983072280884 0.8594802618026733
+ unit, activation function, features , train accuracy, test accuracy 
+64 sigmoid 118 0.8882080912590027 0.8629176616668701
+ unit, activation function, features , train accuracy, test accuracy 
+128 relu 118 0.8746734261512756 0.8607177138328552
+ unit, activation function, features , train accuracy, test accuracy 
+128 tanh 118 0.8773632049560547 0.8589302897453308
+ unit, activation function, features , train accuracy, test accuracy 
+128 sigmoid 118 0.8953750133514404 0.8590334057807922
